@@ -1,0 +1,1 @@
+[{"id":"84600a2e.004348","type":"e-mail","z":"4e7b5a04.e01054","server":"smtp.gmail.com","port":"465","secure":true,"tls":false,"name":"gauravatmunich@gmail.com","dname":"Send mail","x":972.7579002380371,"y":399.40223264694214,"wires":[]}]
