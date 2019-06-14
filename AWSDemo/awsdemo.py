@@ -11,11 +11,11 @@ from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
 import picam
 import pimqtt
 
+p1 = picam.picam(1280, 720)
+p1.SetResolution(1280,720)
 def run_Cam(self, params, packet):
 	print(packet.payload)
 	print("run_Cam executed ")
-	p1 = picam.picam(1280, 720)
-	p1.SetResolution(1280,720)
 	respDict = json.loads(packet.payload)
 	command=respDict["mode"]
 	print(command)
