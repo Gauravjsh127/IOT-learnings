@@ -22,7 +22,7 @@ def run_Cam(self, params, packet):
 	if(command=="pic"):
 		p1.ClickPicture("pic","jpg")
 	else:
-		p1.RecordVideo("video","h264",20)
+		p1.RecordVideo("video","h264",10)
 	
 	
 pimqttclient = pimqtt.pimqttClient("pihome","a2yj40rcma4sm-ats.iot.us-west-2.amazonaws.com")
