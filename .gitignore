@@ -1,10 +1,4 @@
-
-
-
-
-AWSDemo/pic.jpg
-	AWSDemo/picam.pyc
-	AWSDemo/pimqtt.pyc
-
-	AWSDemo/video.h264
-AWSDemo/pi-cert
+AWSDemo/*.jpg
+AWSDemo/*.pyc
+AWSDemo/*.h264
+AWSDemo/pi-cert/
