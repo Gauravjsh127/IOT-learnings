@@ -47,7 +47,7 @@ class pimqttClient:
 if __name__ == "__main__":
 	### Use this to test the Mqtt connection
 	pimqttclient = pimqttClient("pihome","a2yj40rcma4sm-ats.iot.us-west-2.amazonaws.com")
-	pimqttclient.mqttConfigureCertificates("/home/pi/AWSDemo/pi-cert/")
+	pimqttclient.mqttConfigureCertificates("/home/pi/code/IOT-learnings/AWSDemo/pi-cert")
 	pimqttclient.mqttConfiguration()
 	pimqttclient.mqttConnect()
 	pimqttclient.mqttDisconnect()
