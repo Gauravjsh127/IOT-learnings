@@ -31,13 +31,13 @@ pimqttclient.mqttConfiguration()
 pimqttclient.mqttConnect()
 pimqttclient.mqttDisconnect()
 pimqttclient.mqttConnect()
-pimqttclient.mqttSubscribe("home/runCam",run_Cam)
+pimqttclient.mqttSubscribe("run/cam",run_Cam)
 counter=1
 testData = {}
 while True:
 	time.sleep(5)
 	testData['counter'] = counter
 	jtestData = json.dumps(testData)
-	pimqttclient.mqttPublish("home/pubTest",jtestData)
+	pimqttclient.mqttPublish("run/pub",jtestData)
 	print("Publish Test Data "+ str(counter))
 	counter=counter+1
