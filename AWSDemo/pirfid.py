@@ -46,9 +46,6 @@ class pirfid:
 	
 	  
 if __name__ == "__main__":
-	### Use this to test the RFID Module of Pi
-	key = [0xFF,0xFF,0xFF,0xFF,0xFF,0xFF]
-	rfid = pirfid(key)
 	# Welcome message
 	print("Looking for cards")
 	print("Press Ctrl-C to stop.")
@@ -56,6 +53,9 @@ if __name__ == "__main__":
 	counter=1;
 	try:
 		while True:
+			### Use this to test the RFID Module of Pi
+			key = [0xFF,0xFF,0xFF,0xFF,0xFF,0xFF]
+			rfid = pirfid(key)
 			status=rfid.rfidUID()
 			if(status==1):
 				# Print UID
