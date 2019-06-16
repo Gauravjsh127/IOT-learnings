@@ -61,7 +61,6 @@ if __name__ == "__main__":
 				# Print UID
 				print("Card Read successfull : "+str(counter))
 				print("UID: "+str(rfid.uid[0])+","+str(rfid.uid[1])+","+str(rfid.uid[2])+","+str(rfid.uid[3]))
-				counter=counter+1
 				status=rfid.rfidAuthenthication()
 				# Variable for the data to write
 				data = []
@@ -75,7 +74,8 @@ if __name__ == "__main__":
 					# Read block 8
 					rfid.rfidRead()				
 				else:
-					print("\n Authentication unsuccessful ")				
+					print("\n Authentication unsuccessful ")		
+				counter=counter+1	
 			time.sleep(2)
 		
 	except KeyboardInterrupt:
