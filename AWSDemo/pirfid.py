@@ -38,15 +38,16 @@ if __name__ == "__main__":
 	print("Looking for cards")
 	print("Press Ctrl-C to stop.")
 	# This loop checks for chips. If one is near it will get the UID	
-	counter=0;
+	counter=1;
 	try:
-		status=rfid.getUID()
-		if(status==1):
-			# Print UID
-			print("Card Read successfull : "+str(counter))
-			print("UID: "+str(rfid.uid[0])+","+str(rfid.uid[1])+","+str(rfid.uid[2])+","+str(rfid.uid[3]))
-			counter=counter+1
-		time.sleep(2)
+		while True:
+			status=rfid.getUID()
+			if(status==1):
+				# Print UID
+				print("Card Read successfull : "+str(counter))
+				print("UID: "+str(rfid.uid[0])+","+str(rfid.uid[1])+","+str(rfid.uid[2])+","+str(rfid.uid[3]))
+				counter=counter+1
+			time.sleep(2)
 		
 	except KeyboardInterrupt:
 	  GPIO.cleanup()
