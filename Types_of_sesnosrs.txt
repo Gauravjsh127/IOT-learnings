@@ -1,0 +1,74 @@
+####https://www.finoit.com/blog/top-15-sensor-types-used-iot/ 
+
+
+1. Temperature Sensors
+   
+   A device used to measure the amount of heat energy that allows to detect a physical change in temperature from a particular source and converts the data for a device or user is known as a Temperature Sensor.
+   
+   
+2. Proximity Sensor
+
+   A device that detects the presence or absence of a nearby object, or properties of that object, and converts it into a signal which can be easily read by the user or a simple electronic instrument without getting in contact with them.
+	
+
+3. Pressure Sensor
+
+   A pressure sensor is a device that senses pressure and converts it into an electric signal. Here, the amount depends upon the level of pressure applied.
+   
+   
+4. Water Quality Sensor
+
+   Water quality sensors are used to detect the water quality and Ion monitoring primarily in water distribution systems.
+	
+	
+5. Chemical Sensor
+
+   Chemical sensors are applied in a number of different industries. Their goal is to indicate changes in liquid or to find out air chemical changes. They play an important role in bigger cities, where it is necessary to track changes and protect the population
+
+   
+6. Gas Sensor
+   
+   Gas sensors are similar to the chemical ones but are specifically used to monitor changes of the air quality and detect the presence of various gases. Like chemical sensors, they are used in numerous industries such as manufacturing, agriculture and health and used for air quality monitoring, detection of toxic or combustible gas, hazardous gas monitoring in coal mines, oil & gas industries, chemical laboratory research, manufacturing – paints, plastics, rubber, pharmaceutical & petrochemical etc
+
+    
+7. Smoke Sensor
+
+    A smoke sensor is a device that senses smoke (airborne particulates & gases) and its level.
+   
+8. IR Sensors
+   
+   An infrared sensor is a sensor which is used to sense certain characteristics of its surroundings by either emitting or detecting infrared radiation. It is also capable of measuring the heat being emitted by the objects.
+   
+9. Level Sensors
+
+   A sensor which is used to determine the level or amount of fluids, liquids or other substances that flow in an open or closed system is called a level sensor.
+   
+
+10.Image Sensors
+
+   Image sensors are instruments which are used to convert optical images into electronic signals for displaying or storing files electronically.
+   
+ 
+11.Motion Detection Sensors
+   
+   A motion detector is an electronic device which is used to detect the physical movement (motion) in a given area and it transforms motion into an electric signal; motion of an object or motion of human beings.
+   
+
+12.Accelerometer Sensors
+
+   An accelerometer is a transducer that is used to measure the physical or measurable acceleration experienced by an object due to inertial forces and converts the mechanical motion into an electrical output. It is defined as the rate of change of velocity with respect to time.
+
+
+13.Gyroscope Sensors
+
+   A sensor or device which is used to measure the angular rate or angular velocity is known as Gyro sensors. Angular velocity is simply defined as a measurement of the speed of rotation around an axis. It is a device used primarily for navigation and measurement of angular and rotational velocity in 3-axis directions. The most important application is monitoring the orientation of an object.
+   
+
+14.Humidity Sensors
+
+   Humidity is defined as the amount of water vapour in an atmosphere of air or other gases. The most commonly used terms are “Relative Humidity (RH).
+   
+   
+15.Optical Sensors
+  
+   A sensor which measures the physical quantity of light rays and converts it into an electrical signal which can be easily readable by a user or an electronic instrument/device is called an optical sensor. Optical sensors are loved by IoT experts, as they are practical for measuring different things simultaneously. The technology behind this sensor allows it to monitor electromagnetic energy, which includes, electricity, light and so on.
