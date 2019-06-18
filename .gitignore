@@ -1,4 +1,7 @@
-AWSDemo/*.jpg
-AWSDemo/*.pyc
-AWSDemo/*.h264
-AWSDemo/pi-cert/
+AWSIOT/*.jpg
+AWSIOT/*.pyc
+AWSIOT/*.h264
+AWSIOT/pi-cert/
+AWSRecognition/*.csv
+AWSRecognition/*.jpg
+AWSRecognition/*.pyc
