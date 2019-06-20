@@ -3,11 +3,11 @@ import boto3
 from botocore.exceptions import ClientError
 
 ## The image must be formatted as a PNG or JPEG file
-t1='t1.jpg'
+t1='t1.jpeg'
 t2='t2.jpg'
 t3='t3.jpg'
-t4='t4.jpg'
 
+bucketname="gauravjsh127"
 class AWSS3:
 	def __init__(self,access_key_id,secret_access_key):
 		self.client = boto3.client('s3',aws_access_key_id=access_key_id,aws_secret_access_key=secret_access_key,region_name='us-west-2')
@@ -21,13 +21,11 @@ class AWSS3:
 	def deleteBucket(self,bucketname):
 		self.client.delete_bucket(Bucket=bucketname)
 		
-	def addData(self,dataname):
-		self.dataname=dataname
-		self.base64_encodeinputimage(image)
+	def uploadFile(self,bucketname,filename):
+		self.client.upload_file(filename,bucketname,filename)
 		
-	def deleteData(self,bucketname):
-		self.bucketname=bucketname
-		self.base64_encodeinputimage(image)					
+	def deleteFile(self,bucketname,filename):
+		self.client.delete_object(Bucket=bucketname, Key=filename)			
 					
 if __name__ == "__main__":
 
@@ -48,7 +46,7 @@ if __name__ == "__main__":
 	for bucket in AWSS3.response['Buckets']:
 		print("Bucket Name  : "+ bucket['Name'])
 	
-	print("#######Add a bucket All Bucket #####################")
+	print("#######Add a new bucket #####################")
 	AWSS3.createBucket("gauravbucket11111")
 
 	print("#######List All Bucket #####################")
@@ -56,7 +54,7 @@ if __name__ == "__main__":
 	for bucket in AWSS3.response['Buckets']:
 		print("Bucket Name  : "+ bucket['Name'])
 
-	print("#######Add a bucket All Bucket #####################")
+	print("#######Delete a bucket #####################")
 	AWSS3.deleteBucket("gauravbucket11111")
 
 	print("#######List All Bucket #####################")
@@ -64,3 +62,12 @@ if __name__ == "__main__":
 	for bucket in AWSS3.response['Buckets']:
 		print("Bucket Name  : "+ bucket['Name'])
 					
+	print("#######Add a file inside Bucket #####################")
+	AWSS3.uploadFile(bucketname,t1)
+	AWSS3.uploadFile(bucketname,t2)
+	AWSS3.uploadFile(bucketname,t3)
+	
+	print("#######Deelete a file inside Bucket #####################")
+	AWSS3.deleteFile(bucketname,t1)
+	AWSS3.deleteFile(bucketname,t2)
+	
