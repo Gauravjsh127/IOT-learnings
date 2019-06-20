@@ -5,3 +5,7 @@ AWSIOT/pi-cert/
 AWSRecognition/*.csv
 AWSRecognition/*.jpg
 AWSRecognition/*.pyc
+AWSS3/*.csv
+AWSS3/*.jpg
+AWSS3/*.pyc
+AWSS3/*.jpeg

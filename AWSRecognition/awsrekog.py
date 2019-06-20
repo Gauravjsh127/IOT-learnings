@@ -5,7 +5,9 @@ import boto3
 LabelImage='test.jpg'
 BikiniImage="Bikini.jpeg"
 girlsmiling="girl-smiling.jpg"
+Billionares="Billionares.jpeg"
 two_girls_smiling="two_girls_smiling.jpeg"
+
 BucketName="gauravjsh127"
 
 class AWSRekog:
@@ -43,7 +45,11 @@ class AWSRekog:
 	#https://us-west-2.console.aws.amazon.com/rekognition/home?region=us-west-2#/face-detection
 	def detecMultipleFaceS3DB(self):
 		self.response=self.client.detect_faces(Image={'S3Object': {'Bucket': BucketName , 'Name': self.image}}, Attributes=['ALL'])
-		
+
+	#https://us-west-2.console.aws.amazon.com/rekognition/home?region=us-west-2#/face-detection
+	def detecCelebretiesS3DB(self):
+		self.response=self.client.recognize_celebrities(Image={'S3Object': {'Bucket': BucketName , 'Name': self.image}})
+			
 					
 if __name__ == "__main__":
 
@@ -87,4 +93,17 @@ if __name__ == "__main__":
 		if key=="FaceDetails":
 			for people_att in value:
 				print (people_att)
-			print("*********************************************************")
+				print("*********************************************************")
+			
+			
+	print("#######S3 DB Detect Celebreties #####################")
+	AWSRekog.inputimageRemote(Billionares)
+	AWSRekog.detecCelebretiesS3DB()
+	print(AWSRekog.response)
+	
+	for key,value in AWSRekog.response.items():
+		if key=="CelebrityFaces":
+			for people in value:
+				print (people)
+				print("*********************************************************")
+			
