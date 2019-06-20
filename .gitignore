@@ -1,11 +1,6 @@
-AWSIOT/*.jpg
-AWSIOT/*.pyc
-AWSIOT/*.h264
-AWSIOT/pi-cert/
-AWSRecognition/*.csv
-AWSRecognition/*.jpg
-AWSRecognition/*.pyc
-AWSS3/*.csv
-AWSS3/*.jpg
-AWSS3/*.pyc
-AWSS3/*.jpeg
+AWS*/*.csv
+AWS*/*.jpg
+AWS*/*.pyc
+AWS*/*.jpeg
+
+
