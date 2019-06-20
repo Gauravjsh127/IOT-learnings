@@ -4,7 +4,8 @@ import boto3
 ## The image must be formatted as a PNG or JPEG file
 LabelImage='test.jpg'
 BikiniImage="Bikini.jpeg"
-
+girlsmiling="girl-smiling.jpg"
+two_girls_smiling="two_girls_smiling.jpeg"
 BucketName="gauravjsh127"
 
 class AWSRekog:
@@ -37,9 +38,13 @@ class AWSRekog:
 
 	#https://us-west-2.console.aws.amazon.com/rekognition/home?region=us-west-2#/face-detection
 	def detecFaceS3DB(self):
-		self.response=self.client.detect_faces(Image={'S3Object': {'Bucket': BucketName , 'Name': self.image}})
+		self.response=self.client.detect_faces(Image={'S3Object': {'Bucket': BucketName , 'Name': self.image}}, Attributes=['ALL'])
 		
-			
+	#https://us-west-2.console.aws.amazon.com/rekognition/home?region=us-west-2#/face-detection
+	def detecMultipleFaceS3DB(self):
+		self.response=self.client.detect_faces(Image={'S3Object': {'Bucket': BucketName , 'Name': self.image}}, Attributes=['ALL'])
+		
+					
 if __name__ == "__main__":
 
 	#access_key_id=""
@@ -53,17 +58,33 @@ if __name__ == "__main__":
 			
 	AWSRekog = AWSRekog(access_key_id, secret_access_key)
 
-	print("#######Local Image #####################")
+	print("#######Local Image Detect Lables#####################")
 	AWSRekog.inputimageLocal(LabelImage)
 	AWSRekog.detectLablesLocalImage()
 	print(AWSRekog.response)
 	
-	print("#######S3 DB Image #####################")
+	print("#######S3 DB Image Detect Lables #####################")
 	AWSRekog.inputimageRemote(LabelImage)
 	AWSRekog.detectLablesS3DB()
 	print(AWSRekog.response)
 
-	print("#######S3 DB Image #####################")
+	print("#######S3 DB Image Moderation #####################")
 	AWSRekog.inputimageRemote(BikiniImage)
 	AWSRekog.detecModerationS3DB()
 	print(AWSRekog.response)
+	
+	print("#######S3 DB Detect Facial attributes #####################")
+	AWSRekog.inputimageRemote(girlsmiling)
+	AWSRekog.detecFaceS3DB()
+	print(AWSRekog.response)
+
+	print("#######S3 DB Detect Multiple Faces Facial attributes #####################")
+	AWSRekog.inputimageRemote(two_girls_smiling)
+	AWSRekog.detecMultipleFaceS3DB()
+	print(AWSRekog.response)
+	
+	for key,value in AWSRekog.response.items():
+		if key=="FaceDetails":
+			for people_att in value:
+				print (people_att)
+			print("*********************************************************")
