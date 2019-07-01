@@ -1,6 +1,6 @@
-AWS*/*.csv
-AWS*/*.jpg
-AWS*/*.pyc
-AWS*/*.jpeg
+*/*.csv
+*/*.jpg
+*/*.pyc
+*/*.jpeg
 
 
